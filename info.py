@@ -18,8 +18,8 @@ API_HASH = environ.get('API_HASH', '')
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5672857559').split()]
-USERNAME = environ.get('USERNAME', "https://t.me/IM_JISSHU") # ADMIN USERNAME
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+USERNAME = environ.get('USERNAME', "https://t.me/") # ADMIN USERNAME
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
 MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/JisshuMovieZone')
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
@@ -27,7 +27,7 @@ CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHAN
 #---------------------------------------------------------------
 DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'My_Tg_files')
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 #----------- There will be channel id add in all these ---------
@@ -134,3 +134,33 @@ SETTINGS = {
             'api_three': SHORTENER_API3,
             'third_verify_time': THREE_VERIFY_GAP
 }
+
+admin_cmds = [
+    "/add_premium", "/premium_users", "/remove_premium", "/add_redeem",
+    "/refresh", "/set_muc", "/pm_search_on", "/pm_search_off",
+    "/set_ads", "/del_ads", "/setlist", "/clearlist",
+    "/verify_id", "/index", "/send", "/leave",
+    "/ban", "/unban", "/broadcast", "/grp_broadcast",
+    "/delreq", "/channel", "/del_file", "/delete",
+    "/deletefiles", "/deleteall", 
+    "All These Commands Can Be Used Only By Admins.", 
+    "⚡ powered by @JISSHU_BOTS"
+]
+
+cmds = [
+    {"start": "Start The Bot"},
+    {"most": "Get Most Searches Button List"},
+    {"trend": "Get Top Trending Button List"},
+    {"mostlist": "Show Most Searches List"},
+    {"trendlist": "𝖦𝖾𝗍 𝖳𝗈𝗉 𝖳𝗋𝖾𝗇𝖽𝗂𝗇𝗀 𝖡𝗎𝗍𝗍𝗈𝗇 𝖫𝗂𝗌t"},
+    {"plan": "Check Available Premium Membership Plans"},
+    {"myplan": "Check Your Currunt Plan"},
+    {"refer": "To Refer Your Friend And Get Premium"},
+    {"stats": "Check My Database"},
+    {"id": "Get Telegram Id"},
+    {"font": "To Generate Cool Fonts"},
+    {"details": "Check Group Details"},
+    {"settings": "Change Bot Setting"},
+    {"grp_cmds": "Check Group Commands"},
+    {"admin_cmds": "Bot Admin Commands"}
+]
